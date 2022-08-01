@@ -1,0 +1,35 @@
+
+<h1 >ADD ITEM PRICE</h1>
+
+
+<label>IPDIID</label>
+<input type="text" class="form-control" [(ngModel)]="detailsId"><br>
+<!-- <div class="err" *ngIf="priceForm.controls['itemid'].invalid && (priceForm.controls['itemid'].dirty || priceForm.controls['itemid'].touched)">
+  <div class="text-danger" *ngIf="priceForm.controls['itemid'].errors?.['required']">*Item Id is required </div>
+</div> -->
+
+<label>IPDMRP</label>
+<input type="text" class="form-control" [(ngModel)]="pricemrp"><br>
+
+
+<label>IPDDISCOUNT</label>
+<input type="text" class="form-control" [(ngModel)]="discount"><br>
+
+
+<label>IPDSTARTDATE</label>
+<input type="date"  class="form-control" [(ngModel)]="startdate"><br>
+
+
+<label>IPDENDDATE</label>
+<input type="date"  class="form-control" [(ngModel)]="enddate"><br>
+
+
+<label>IPDSTATUS</label>
+<select class="form-control" [(ngModel)]="status">
+        <option class="form-control">Y</option>
+        <option class="form-control">N</option></select><br>
+  <!-- <div class="err" *ngIf="priceForm.controls['status'].invalid && (priceForm.controls['status'].dirty || priceForm.controls['status'].touched)">
+  <div class="text-danger" *ngIf="priceForm.controls['status'].errors?.['required']">*Status is required </div>
+</div> -->
+
+<input type="submit" class="btn btn-primary" value="Add Price" (click)="addpricedetails()" > <a class="btn btn-danger" routerLink="/viewprice" >Go To View</a>

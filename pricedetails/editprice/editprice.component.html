@@ -1,0 +1,46 @@
+<body>
+  <div class="wrapper fadeInDown">
+    <div id="formContent">
+      <!-- Tabs Titles -->
+
+      <!-- Icon -->
+
+         <h1>EDIT ITEM PRICE</h1>
+      <!-- Login Form -->
+      <form [formGroup]="priceForm">
+
+        <label>IPDID</label>
+        <input type="text" id="login" class="fadeIn second" name="login"  formControlName="priceid">
+
+        <label>IPDIID</label>
+        <input type="text" id="login" class="fadeIn second" name="login"  formControlName="itempriceid">
+
+        <label>IPDMRP</label>
+        <input type="text" id="login" class="fadeIn second" name="login" formControlName="pricemrp">
+
+        <label>MARKETPRICE</label>
+        <input type="text" id="login" class="fadeIn second" name="login" formControlName="merketprice">
+
+        <label>DICOUNT</label>
+        <input type="text" id="login" class="fadeIn second" name="login" formControlName="dicount">
+
+        <label>STARTDATE</label>
+        <input type="text" id="login" class="fadeIn second" name="login" formControlName="statdate">
+
+        <label>ENDDATE</label>
+        <input type="text" id="login" class="fadeIn second" name="login" formControlName="enddate">
+
+        <label>STATUS</label>
+        <input type="text" id="password" class="fadeIn third" name="login" formControlName="status">
+
+        <input type="submit" class="fadeIn fourth" value="Update Price" (click)="EditPrice()"> <a class="btn btn-danger" routerLink="/viewprice" style="color:white">Back To View</a>
+
+
+
+      <!-- Remind Passowrd -->
+  </form>
+
+    </div>
+  </div>
+  </body>
+
