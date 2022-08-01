@@ -1,0 +1,24 @@
+<h1 >ADD ITEM DETAILS</h1>
+<form [formGroup]="detailForm">
+
+<label>ITEM NAME</label>
+<input type="type" class="form-control" formControlName="itemname"><br>
+
+<label>ITEM DESC</label>
+<input type="type" class="form-control" formControlName="itemdesc"><br>
+
+<label>ITEM IMAGE</label>
+<div class="'d-flex flex-colomn align-items-center text-center p-2 py-4 bg-light" >
+  <img [src]="url" width="275">
+  <input type="file" style="display:none" (change)="selectFile($event)" #input>
+  <button type="button" (click)="input.click()" class="btn btn-success">Go File</button>
+</div>
+
+<label>ITEM STATUS</label>
+<select class="form-control" formControlName="itemstatus">
+        <option >Y</option>
+        <option >N</option>
+      </select>
+      <br>
+</form>
+<input type="submit" class="btn btn-primary" value="Add Details" (click)="AddDetails()" [disabled]="detailForm.invalid"> <a class="btn btn-danger" routerLink="/viewdetail">Go To View</a>

@@ -1,0 +1,41 @@
+<body>
+  <div class="wrapper fadeInDown">
+    <div id="formContent">
+      <!-- Tabs Titles -->
+
+      <!-- Icon -->
+
+         <h1>EDIT PRIVILAGES</h1>
+      <!-- Login Form -->
+      <form [formGroup]="detailForm">
+
+        <label>ITEM ID</label>
+        <input type="text" id="login" class="fadeIn second" name="login"  formControlName="itemid">
+
+        <label>ITEM NAME</label>
+        <input type="text" id="login" class="fadeIn second" name="login" formControlName="itemname">
+
+        <label>ITEM DISCOUNT</label>
+        <input type="text" id="login" class="fadeIn second" name="login"  formControlName="itemdisc">
+
+        <!-- <img [src]="image"> -->
+
+        <label>CHANGE IMAGE</label>
+        <div class="'d-flex flex-colomn align-items-center text-center p-2 py-4 bg-light" >
+          <img [src]="url" width="275" >
+          <input type="file" style="display:none" (change)="selectFile($event)" #input >
+          <button type="button" (click)="input.click()" class="btn btn-success">Go File</button>
+        </div>
+
+        <label>ITEM STATUS</label>
+        <input type="text" id="password" class="fadeIn third" name="login" formControlName="itemstatus">
+
+        <input type="submit" class="fadeIn fourth" value="Update Item Privilage" (click)="EditDetails()"> <a class="btn btn-danger" routerLink="/viewdetail" style="color:white">Back To View</a>
+
+      <!-- Remind Passowrd -->
+  </form>
+
+    </div>
+  </div>
+  </body>
+

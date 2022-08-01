@@ -1,0 +1,55 @@
+body{
+  background-color: currentcolor;
+  height:auto;
+}
+p{
+  margin-left: 20px;
+}
+/* .card{
+  background-color:white;
+  margin-left: 120px;
+  margin-bottom: 20px;
+  margin-top: 60px;
+  border-radius: 30px!important;
+} */
+.rounded {
+  border-radius: 50px!important;
+  /* margin-right: 100px!important;
+  padding-left: 10px!important; */
+}
+
+.price{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.detials{
+  margin-left: 30px;
+  margin-top: 70px;
+}
+
+.title{
+  text-align: center;
+  margin-top: 20px;
+}
+.card{
+  border: 10px solid rgb(68 68 68);
+  border-radius: 30px;
+  margin-top: 36px;
+}
+.offcanvas{
+  cursor: pointer;
+}
+.myimage{
+  width: 242px;
+  height: 230px;
+  margin-left: 47px;
+}
+.myimage2{
+  width: 228px;
+  height: 186px;
+}
+.spyhre{
+  transform: translate3d(0, -145%, 0);
+    margin-left: 61px;
+}
