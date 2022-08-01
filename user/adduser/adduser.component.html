@@ -1,0 +1,37 @@
+
+
+<h1 >ADD USER</h1>
+<form [formGroup]="userForm">
+
+<label>NAME</label>
+<input type="text" class="form-control" formControlName="username"><br>
+<div class="err" *ngIf="userForm.controls['username'].invalid && (userForm.controls['username'].dirty || userForm.controls['username'].touched)">
+  <div class="text-danger" *ngIf="userForm.controls['username'].errors?.['required']">*Username is required </div>
+</div>
+
+<label>PASSWORD</label>
+<input type="text" class="form-control" formControlName="password"><br>
+<div class="err" *ngIf="userForm.controls['password'].invalid && (userForm.controls['password'].dirty || userForm.controls['password'].touched)">
+  <div class="text-danger" *ngIf="userForm.controls['password'].errors?.['required']">*Password is required </div>
+</div>
+
+<label>ROLE</label>
+<select class="form-control" formControlName="role" (change)="change($event)">
+        <option class="form-control" value="12">Admin</option>
+        <option class="form-control" value="15">Manager</option>
+        <option class="form-control" value="16">Employee</option></select><br>
+  <div class="err" *ngIf="userForm.controls['role'].invalid && (userForm.controls['role'].dirty || userForm.controls['role'].touched)">
+  <div class="text-danger" *ngIf="userForm.controls['role'].errors?.['required']">*Role is required </div>
+</div>
+
+<label>STATUS</label>
+<select class="form-control" formControlName="status">
+        <option class="form-control">Y</option>
+        <option class="form-control">N</option>
+        </select><br>
+  <div class="err" *ngIf="userForm.controls['status'].invalid && (userForm.controls['status'].dirty || userForm.controls['status'].touched)">
+  <div class="text-danger" *ngIf="userForm.controls['status'].errors?.['required']">*Status is required </div>
+</div>
+</form>
+<input type="submit" class="btn btn-primary" value="Add User" (click)="AddUser()" [disabled]="userForm.invalid"> <a class="btn btn-secondary" routerLink="/viewuser">Go To Users</a>
+
